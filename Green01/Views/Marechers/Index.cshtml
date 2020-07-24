@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MetierPlant.Models.Marecher>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datePlante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Taille)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Poids)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Humidite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Semanance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Periode)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datePlante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Taille)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Poids)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Humidite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Semanance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Periode)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

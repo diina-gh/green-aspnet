@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MetierPlant.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MetierPlant.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Profil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdProfil" type="xs:int" />
+      <xs:element minOccurs="0" name="LibelleProfil" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Profil" nillable="true" type="tns:Profil" />
+  <xs:complexType name="ArrayOfProfil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Profil" nillable="true" type="tns:Profil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfil" nillable="true" type="tns:ArrayOfProfil" />
+  <xs:complexType name="Utilisateur">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdU" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdentifiantU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NomPrenomU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelU" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Utilisateur" nillable="true" type="tns:Utilisateur" />
+  <xs:complexType name="ArrayOfUtilisateur">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Utilisateur" nillable="true" type="tns:Utilisateur" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUtilisateur" nillable="true" type="tns:ArrayOfUtilisateur" />
+  <xs:complexType name="Fruitier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Plante">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateSemanance" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Fruitier" nillable="true" type="tns:Fruitier" />
+  <xs:complexType name="Plante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Humidite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Poids" type="xs:double" />
+      <xs:element minOccurs="0" name="Taille" type="xs:int" />
+      <xs:element minOccurs="0" name="datePlante" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="designation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Plante" nillable="true" type="tns:Plante" />
+  <xs:complexType name="ArrayOfFruitier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Fruitier" nillable="true" type="tns:Fruitier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFruitier" nillable="true" type="tns:ArrayOfFruitier" />
+  <xs:complexType name="Marecher">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Plante">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Periode" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Semanance" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Marecher" nillable="true" type="tns:Marecher" />
+  <xs:complexType name="ArrayOfMarecher">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Marecher" nillable="true" type="tns:Marecher" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMarecher" nillable="true" type="tns:ArrayOfMarecher" />
+</xs:schema>

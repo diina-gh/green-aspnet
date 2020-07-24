@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61973/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61973/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61973/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MetierPlant" />
+      <xsd:import schemaLocation="http://localhost:61973/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MetierPlant.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddProfil" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListProfil_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListProfil" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListProfil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListProfilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUtilisateur_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUtilisateur" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddUtilisateur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUtilisateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUtilisateur_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUtilisateur" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUtilisateur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUtilisateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUtilisateur_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUtilisateur" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUtilisateur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUtilisateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListUtilisateur_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUtilisateur" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListUtilisateur_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUtilisateurResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUtilisateurById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUtilisateurById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getUtilisateurById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUtilisateurByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFruitier_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFruitier" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddFruitier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFruitierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateFruitier_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFruitier" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateFruitier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFruitierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFruitier_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFruitier" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteFruitier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFruitierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListFruitier_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListFruitier" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListFruitier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListFruitierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFruitierById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFruitierById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFruitierById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFruitierByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddMarecher_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMarecher" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddMarecher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMarecherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMarecher_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMarecher" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateMarecher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMarecherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMarecher_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMarecher" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteMarecher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMarecherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListMarecher_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListMarecher" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListMarecher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListMarecherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getMarecherById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMarecherById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getMarecherById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMarecherByIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddProfil" message="tns:IService1_AddProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddProfilResponse" message="tns:IService1_AddProfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListProfil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListProfil" message="tns:IService1_ListProfil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListProfilResponse" message="tns:IService1_ListProfil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUtilisateur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddUtilisateur" message="tns:IService1_AddUtilisateur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddUtilisateurResponse" message="tns:IService1_AddUtilisateur_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUtilisateur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateUtilisateur" message="tns:IService1_UpdateUtilisateur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateUtilisateurResponse" message="tns:IService1_UpdateUtilisateur_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUtilisateur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteUtilisateur" message="tns:IService1_DeleteUtilisateur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteUtilisateurResponse" message="tns:IService1_DeleteUtilisateur_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUtilisateur">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListUtilisateur" message="tns:IService1_ListUtilisateur_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListUtilisateurResponse" message="tns:IService1_ListUtilisateur_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUtilisateurById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getUtilisateurById" message="tns:IService1_getUtilisateurById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getUtilisateurByIdResponse" message="tns:IService1_getUtilisateurById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFruitier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddFruitier" message="tns:IService1_AddFruitier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddFruitierResponse" message="tns:IService1_AddFruitier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFruitier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateFruitier" message="tns:IService1_UpdateFruitier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateFruitierResponse" message="tns:IService1_UpdateFruitier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFruitier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteFruitier" message="tns:IService1_DeleteFruitier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteFruitierResponse" message="tns:IService1_DeleteFruitier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListFruitier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListFruitier" message="tns:IService1_ListFruitier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListFruitierResponse" message="tns:IService1_ListFruitier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFruitierById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getFruitierById" message="tns:IService1_getFruitierById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getFruitierByIdResponse" message="tns:IService1_getFruitierById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMarecher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddMarecher" message="tns:IService1_AddMarecher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddMarecherResponse" message="tns:IService1_AddMarecher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMarecher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateMarecher" message="tns:IService1_UpdateMarecher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateMarecherResponse" message="tns:IService1_UpdateMarecher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMarecher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteMarecher" message="tns:IService1_DeleteMarecher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteMarecherResponse" message="tns:IService1_DeleteMarecher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListMarecher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListMarecher" message="tns:IService1_ListMarecher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListMarecherResponse" message="tns:IService1_ListMarecher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMarecherById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getMarecherById" message="tns:IService1_getMarecherById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getMarecherByIdResponse" message="tns:IService1_getMarecherById_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProfil">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListProfil">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListProfil" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUtilisateur">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddUtilisateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUtilisateur">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateUtilisateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUtilisateur">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteUtilisateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUtilisateur">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListUtilisateur" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUtilisateurById">
+      <soap:operation soapAction="http://tempuri.org/IService1/getUtilisateurById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFruitier">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddFruitier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFruitier">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateFruitier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFruitier">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteFruitier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListFruitier">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListFruitier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFruitierById">
+      <soap:operation soapAction="http://tempuri.org/IService1/getFruitierById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMarecher">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddMarecher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMarecher">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateMarecher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMarecher">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteMarecher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListMarecher">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListMarecher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMarecherById">
+      <soap:operation soapAction="http://tempuri.org/IService1/getMarecherById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:61973/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

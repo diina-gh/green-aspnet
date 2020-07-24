@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Green02ModelStoreContainer" CdmEntityContainer="Green02Entities">
+    <EntitySetMapping Name="Fruitier">
+      <EntityTypeMapping TypeName="Green02Model.Fruitier">
+        <MappingFragment StoreEntitySet="Fruitier">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="DateSemanance" ColumnName="DateSemanance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marecher">
+      <EntityTypeMapping TypeName="Green02Model.Marecher">
+        <MappingFragment StoreEntitySet="Marecher">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Semanance" ColumnName="Semanance" />
+          <ScalarProperty Name="Periode" ColumnName="Periode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plantes">
+      <EntityTypeMapping TypeName="Green02Model.Plantes">
+        <MappingFragment StoreEntitySet="Plantes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="datePlante" ColumnName="datePlante" />
+          <ScalarProperty Name="Taille" ColumnName="Taille" />
+          <ScalarProperty Name="Poids" ColumnName="Poids" />
+          <ScalarProperty Name="Humidite" ColumnName="Humidite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="profil">
+      <EntityTypeMapping TypeName="Green02Model.profil">
+        <MappingFragment StoreEntitySet="profil">
+          <ScalarProperty Name="IdProfil" ColumnName="IdProfil" />
+          <ScalarProperty Name="LibelleProfil" ColumnName="LibelleProfil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilisateurs">
+      <EntityTypeMapping TypeName="Green02Model.Utilisateurs">
+        <MappingFragment StoreEntitySet="Utilisateurs">
+          <ScalarProperty Name="IdU" ColumnName="IdU" />
+          <ScalarProperty Name="NomPrenomU" ColumnName="NomPrenomU" />
+          <ScalarProperty Name="IdentifiantU" ColumnName="IdentifiantU" />
+          <ScalarProperty Name="EmailU" ColumnName="EmailU" />
+          <ScalarProperty Name="TelU" ColumnName="TelU" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

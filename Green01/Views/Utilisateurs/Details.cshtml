@@ -1,0 +1,59 @@
+﻿@model MetierPlant.Models.Utilisateur
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Utilisateur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomPrenomU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomPrenomU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentifiantU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentifiantU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUser)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdU }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

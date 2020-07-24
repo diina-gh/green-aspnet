@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MetierPlant.Models.Utilisateur>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="widget">
+            <div class="widget-body">
+                @using (Html.BeginForm("Index", "Utilisateurs", FormMethod.Get))
+                {
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <b>Identifiant</b>
+                                @Html.TextBox("IdentifiantU", ViewBag.IdentifiantU as string, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-8">
+                                <input type="submit" value="Rechercher" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomPrenomU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdentifiantU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelU)
+        </th>
+
+        <th>
+            Actions
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomPrenomU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdentifiantU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelU)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.IdU }) |
+                @Html.ActionLink("Details", "Details", new { id = item.IdU }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.IdU })
+            </td>
+        </tr>
+    }
+
+</table>

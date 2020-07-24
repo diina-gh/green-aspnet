@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Green02Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Fruitier">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateSemanance" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Plantes" Relationship="Self.FK_dbo_Fruitier_dbo_Plantes_id" FromRole="Fruitier" ToRole="Plantes" />
+  </EntityType>
+  <EntityType Name="Marecher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="Semanance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Periode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Plantes" Relationship="Self.FK_dbo_Marecher_dbo_Plantes_id" FromRole="Marecher" ToRole="Plantes" />
+  </EntityType>
+  <EntityType Name="Plantes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="designation" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="datePlante" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Taille" Type="Int32" Nullable="false" />
+    <Property Name="Poids" Type="Double" Nullable="false" />
+    <Property Name="Humidite" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Fruitier" Relationship="Self.FK_dbo_Fruitier_dbo_Plantes_id" FromRole="Plantes" ToRole="Fruitier" />
+    <NavigationProperty Name="Marecher" Relationship="Self.FK_dbo_Marecher_dbo_Plantes_id" FromRole="Plantes" ToRole="Marecher" />
+  </EntityType>
+  <EntityType Name="profil">
+    <Key>
+      <PropertyRef Name="IdProfil" />
+    </Key>
+    <Property Name="IdProfil" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LibelleProfil" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utilisateurs">
+    <Key>
+      <PropertyRef Name="IdU" />
+    </Key>
+    <Property Name="IdU" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NomPrenomU" Type="String" MaxLength="160" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdentifiantU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EmailU" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TelU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdUser" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_dbo_Fruitier_dbo_Plantes_id">
+    <End Role="Plantes" Type="Self.Plantes" Multiplicity="1" />
+    <End Role="Fruitier" Type="Self.Fruitier" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Plantes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Fruitier">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Marecher_dbo_Plantes_id">
+    <End Role="Plantes" Type="Self.Plantes" Multiplicity="1" />
+    <End Role="Marecher" Type="Self.Marecher" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Plantes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Marecher">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Green02Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Fruitier" EntityType="Self.Fruitier" />
+    <EntitySet Name="Marecher" EntityType="Self.Marecher" />
+    <EntitySet Name="Plantes" EntityType="Self.Plantes" />
+    <EntitySet Name="profil" EntityType="Self.profil" />
+    <EntitySet Name="Utilisateurs" EntityType="Self.Utilisateurs" />
+    <AssociationSet Name="FK_dbo_Fruitier_dbo_Plantes_id" Association="Self.FK_dbo_Fruitier_dbo_Plantes_id">
+      <End Role="Plantes" EntitySet="Plantes" />
+      <End Role="Fruitier" EntitySet="Fruitier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Marecher_dbo_Plantes_id" Association="Self.FK_dbo_Marecher_dbo_Plantes_id">
+      <End Role="Plantes" EntitySet="Plantes" />
+      <End Role="Marecher" EntitySet="Marecher" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

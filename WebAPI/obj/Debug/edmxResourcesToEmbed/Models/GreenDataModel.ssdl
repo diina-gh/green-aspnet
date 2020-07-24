@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Green02Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Fruitier">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="DateSemanance" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Marecher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Semanance" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Periode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Plantes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="designation" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="datePlante" Type="datetime" Nullable="false" />
+    <Property Name="Taille" Type="int" Nullable="false" />
+    <Property Name="Poids" Type="float" Nullable="false" />
+    <Property Name="Humidite" Type="nvarchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="profil">
+    <Key>
+      <PropertyRef Name="IdProfil" />
+    </Key>
+    <Property Name="IdProfil" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LibelleProfil" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utilisateurs">
+    <Key>
+      <PropertyRef Name="IdU" />
+    </Key>
+    <Property Name="IdU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NomPrenomU" Type="nvarchar" MaxLength="160" Nullable="false" />
+    <Property Name="IdentifiantU" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="EmailU" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="TelU" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="IdUser" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <Association Name="FK_dbo_Fruitier_dbo_Plantes_id">
+    <End Role="Plantes" Type="Self.Plantes" Multiplicity="1" />
+    <End Role="Fruitier" Type="Self.Fruitier" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Plantes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Fruitier">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Marecher_dbo_Plantes_id">
+    <End Role="Plantes" Type="Self.Plantes" Multiplicity="1" />
+    <End Role="Marecher" Type="Self.Marecher" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Plantes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Marecher">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Green02ModelStoreContainer">
+    <EntitySet Name="Fruitier" EntityType="Self.Fruitier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Marecher" EntityType="Self.Marecher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Plantes" EntityType="Self.Plantes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="profil" EntityType="Self.profil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Utilisateurs" EntityType="Self.Utilisateurs" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_Fruitier_dbo_Plantes_id" Association="Self.FK_dbo_Fruitier_dbo_Plantes_id">
+      <End Role="Plantes" EntitySet="Plantes" />
+      <End Role="Fruitier" EntitySet="Fruitier" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Marecher_dbo_Plantes_id" Association="Self.FK_dbo_Marecher_dbo_Plantes_id">
+      <End Role="Plantes" EntitySet="Plantes" />
+      <End Role="Marecher" EntitySet="Marecher" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
