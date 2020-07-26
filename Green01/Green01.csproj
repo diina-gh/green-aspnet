@@ -190,6 +190,15 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Content Include="Images\ContactUs.svg" />
+    <Content Include="Images\plant00.svg" />
+    <Content Include="Images\plant01.svg" />
+    <Content Include="Images\plant03.svg" />
+    <Content Include="Images\plant04.svg" />
+    <Content Include="Images\plant05.svg" />
+    <Content Include="Images\plant06.svg" />
+    <Content Include="Images\plant07.svg" />
+    <Content Include="Images\plant08.svg" />
     <Content Include="Views\Fruitiers\Create.cshtml" />
     <Content Include="Views\Fruitiers\Index.cshtml" />
     <Content Include="Views\Fruitiers\Edit.cshtml" />

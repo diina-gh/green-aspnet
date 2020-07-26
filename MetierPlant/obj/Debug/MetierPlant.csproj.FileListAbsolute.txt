@@ -10,3 +10,14 @@ C:\Users\HP\Source\Repos\Green01\MetierPlant\obj\Debug\MetierPlant.csproj.CopyCo
 C:\Users\HP\Source\Repos\Green01\MetierPlant\obj\Debug\MetierPlant.dll
 C:\Users\HP\Source\Repos\Green01\MetierPlant\obj\Debug\MetierPlant.pdb
 C:\Users\HP\Source\Repos\Green01\MetierPlant\obj\Debug\MetierPlant.csprojAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\bin\MetierPlant.dll.config
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\bin\MetierPlant.dll
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\bin\MetierPlant.pdb
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\bin\EntityFramework.dll
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\bin\EntityFramework.SqlServer.dll
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\bin\EntityFramework.xml
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\bin\EntityFramework.SqlServer.xml
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.csproj.CopyComplete
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.dll
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.pdb
