@@ -12,7 +12,7 @@ using MetierPlant.Models;
 
 namespace Green01.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class FruitiersController : Controller
     {
         private ServiceMetierPlants.Service1Client service = new ServiceMetierPlants.Service1Client();

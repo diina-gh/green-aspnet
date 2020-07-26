@@ -21,3 +21,4 @@ C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.csproj.Core
 C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.csproj.CopyComplete
 C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.dll
 C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.pdb
+C:\Users\HP\Documents\GitHub\Green\MetierPlant\obj\Debug\MetierPlant.csprojAssemblyReference.cache

@@ -7,13 +7,13 @@ using Green01.App_Start;
 
 namespace Green01.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class HomeController : Controller
     {
         [AllowAnonymous]
         public ActionResult Index()
         {
-            this.Flash(string.Format("Soyez le bien venu"), FlashLevel.Info);
+            //this.Flash(string.Format("Soyez le bien venu"), FlashLevel.Info);
             return View();
         }
 

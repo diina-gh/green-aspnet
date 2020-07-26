@@ -22,3 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
+
+h1 {
+    color: darkolivegreen;
+}
+
+h2 {
+    color:darkolivegreen;
+}
